@@ -10,4 +10,6 @@ const middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use(router);
 
-export default server;
+export default (req, res) => {
+    server(req, res);
+};
